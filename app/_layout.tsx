@@ -1,24 +1,17 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import "./global.css";
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <SafeAreaView>
+      <View style={{ backgroundColor: "white", height: "100%",padding: 20 }}>
+        <Text style={{ color: "red" }}>Ahmed Bappy</Text>
+        <TextInput  placeholder="Enter your name" style={{ borderWidth: 1, borderColor: "gray", padding: 10, width: "80%", marginTop: 20,borderRadius: 5 }} />
+        <TouchableOpacity style={{ backgroundColor: "green", padding: 10, marginTop: 20, borderRadius: 5, width: "80%", alignItems: "center" }}>
+          <Text style={{ color: "white", fontWeight: "bold" }}>Submit</Text>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   );
 }
