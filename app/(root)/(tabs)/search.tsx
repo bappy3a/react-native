@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Search() {
   return (
-    <SafeAreaView>
+    <SafeAreaView className="flex-1 bg-white">
         <View>
             <Text>Search</Text>
         </View>
