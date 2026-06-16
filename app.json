@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "app",
-    "slug": "app",
+    "name": "kribb",
+    "slug": "kribb",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/kribb.png",
-    "scheme": "app",
+    "scheme": "kribb",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
